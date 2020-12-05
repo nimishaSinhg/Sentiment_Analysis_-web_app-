@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "main_page.css" %}">
+
+
+  </head>
+  <body>
+    
+<div class="fixed-bg">
+    <nav class="navbar navbar-default  navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a  href="/templates/first_app/MAIN.html">HOME</a>
+        <a  href="#">DOCUMENTATION</a>
+      </div>
+    </div>
+    </nav>
+</div>
+
+    <div  id="after_container">
+    <div class="container" id="one">
+        <div class="container" id ="m">
+        <div class="container" id="d">
+        <div id="outer">
+        <div class="drop-zone" id="drop-zone">
+        <form method='POST' enctype="multipart/form-data" action="upload">
+          {% csrf_token %}
+        <input type="file" name="file" id="file" class="drop-zone__input">
+        <label for="file" class="drop-zone__input">Choose file</label>
+        <button type="submit" class="box__button" >Upload</button>
+ 
+      </form>
+    </div> 
+  </div> 
+</div> 
+   
+   
+   
+ 
+  <div id="de">
+    <h1 id="h1">File Upload</h1>
+    <p>Upload your file here (file type: csv,xlsx)
+      to generate report.</p>
+  </div>
+  </div>
+  </div>
+</div>
+  <div class="container" id="after-Upload">
+    <h1>Sentiment Analysis</h1>
+    <p>Sentiment analysis is contextual mining of text which identifies and extracts subjective information in source material, and helping a business to understand the social sentiment of their brand, product or service while monitoring online conversations.</p>
+  </div>
+  <div class="container">
+    <img src="{% static "images/sentiment.jpg" %}" style="height:580px; width:100%;padding-bottom:50px;padding-top:30px;">
+  </div>
+<!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">2020 :
+      <span class="text-muted">Nimisha Singh</span>
+    </div>
+  </footer>
+ 
+  </body>
+</html>
